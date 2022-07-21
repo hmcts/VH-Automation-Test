@@ -61,7 +61,8 @@ namespace TestLibrary.Utilities
         public static void LaunchSettingsFixture()
         {
             var cs = AppDomain.CurrentDomain.BaseDirectory.ToString();
-            using (var file = File.OpenText(@"Properties\\launchSettings.json"))
+            var separator = Path.DirectorySeparatorChar;
+            using (var file = File.OpenText($@"Properties{separator}launchSettings.json"))
             {
                 var reader = new JsonTextReader(file);
                 var jObject = JObject.Load(reader);

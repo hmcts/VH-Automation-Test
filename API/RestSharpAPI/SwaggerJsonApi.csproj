@@ -20,7 +20,7 @@
     <SpecFlowObsoleteCodeBehindFiles Remove="Drivers\**" />
     <SpecFlowObsoleteCodeBehindFiles Remove="SwaggerDefinitions\**" />
     <SpecFlowObsoleteCodeBehindFiles Remove="TestResults\Logs\**" />
-  </ItemGroup>
+    </ItemGroup>
 
   <ItemGroup>
     <Compile Include="SwaggerDefinitions\ApiException.cs" />
@@ -99,9 +99,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+	  <None Update="appsettings.json">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="passwords.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Properties\launchSettings.json">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
     <None Update="OpenAPIs\swagger.json" ClassName="BookingsApi" />
     <None Update="OpenAPIs\swagger1.json" ClassName="NotificationsApi" />
     <None Update="OpenAPIs\swagger2.json" ClassName="UserApi" />

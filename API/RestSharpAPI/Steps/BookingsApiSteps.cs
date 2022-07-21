@@ -186,7 +186,7 @@ namespace RestSharpApi.Steps
             var cases = await BookingApiService.GetCaseTypesAsync(System.Threading.CancellationToken.None);
                 foreach (var caseType in cases)
                 {
-                    _logger.Info($" Case found {caseType.Name}, {caseType.Id}, {caseType.GetType}");
+                    _logger.Info($" Case found {caseType.Name}, {caseType.Id}, {caseType.GetType()}");
                 }
         _logger.Info($"Case Type List found");
     }
@@ -254,8 +254,8 @@ namespace RestSharpApi.Steps
             var f = await BookingApiService2.GetHearingDetailsByIdAsync(hearingId);
             foreach (var participant in f.Participants)
             {
-                _logger.Info($"looking at participant {participant.Username}, {participant.GetType}, {participant.First_name} {participant.Last_name}");
-                sb2.Append($"participant {participant.Username}, {participant.GetType}, {participant.First_name} {participant.Last_name}");
+                _logger.Info($"looking at participant {participant.Username}, {participant.GetType()}, {participant.First_name} {participant.Last_name}");
+                sb2.Append($"participant {participant.Username}, {participant.GetType()}, {participant.First_name} {participant.Last_name}");
             }
             }
             catch (Exception)
