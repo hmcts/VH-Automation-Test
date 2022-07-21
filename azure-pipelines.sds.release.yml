@@ -29,13 +29,13 @@ stages:
       displayName: Build
       inputs:
         command: build
-        projects: '**/*.csproj'
+        projects: 'UI*/*.csproj'
         arguments: '--configuration $(buildConfiguration)'
 
     - task: DotNetCoreCLI@2
       inputs:
         command: test
-        projects: '**/*.csproj'
+        projects: 'UI*/*.csproj'
         arguments: '--configuration $(buildConfiguration)'
 
     - task: PublishTestResults@2
