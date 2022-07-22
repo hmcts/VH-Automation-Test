@@ -69,7 +69,7 @@ resources:
       ref: refs/heads/master
       endpoint: hmcts
   pipelines:
-   - pipeline: CI
+   - pipeline: CD
      source: hmcts.VH-Automation-Test
      trigger:
        branches:
