@@ -1,6 +1,7 @@
 
 trigger: 
 - master
+- fix_for_issue_with_app_settings_config
 
 pr:
 - master
