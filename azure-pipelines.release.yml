@@ -68,6 +68,15 @@ resources:
       name: hmcts/azure-devops-templates
       ref: refs/heads/master
       endpoint: hmcts
+  pipelines:
+   - pipeline: CI
+     source: hmcts.VH-Automation-Test
+     trigger:
+       branches:
+         - master
+         - hotfix/*
+         - release/*
+         - fix_for_issue_with_app_settings_config
 
 steps:
 - task: DotNetCoreCLI@2
